@@ -5,5 +5,12 @@ from . import models
 class DogSerializer(serializers.ModelSerializer):
 
     class Meta:
-        fields = ('id', 'name', 'breed', 'created_at', 'updated_at',)
+        fields = ('id', 'name', 'breed', 'latitude', 'longitude', 'created_at', 'updated_at',)
         model = models.Dog
+
+
+class DogParkSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        fields = ('id', 'name', 'latitude', 'longitude', 'created_at', 'updated_at',)
+        model = models.DogPark
